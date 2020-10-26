@@ -93,6 +93,13 @@ sitemap default label="Benvenuto a Casa" {
 		Default item=StatoInternoAZ8 label="Richiesta Deumidifica Mansarda" labelcolor=[0="green",1="red"] valuecolor=[0="green",1="red"] visibility=[ImpostaStagioneCorrente == 1]
 		Default item=StatoInternoEZ8 label="Formazione Condensa Mansarda" labelcolor=[0="green",1="red"] valuecolor=[0="green",1="red"] visibility=[ImpostaStagioneCorrente == 1]
 		}
+	Frame label="CLIMA SERRA" {
+	 	Default item=Serra_Air_Conditioner_CurrentTemperature label="Temp. Corrente [%.1f °C]"
+		Switch item=Serra_Air_Conditioner_DryMode label="Deumidifica [MAP(clima4.map):%s"
+		Switch item=Serra_Air_Conditioner_HealthMode label="Health [MAP(clima4.map):%s"
+		Switch item=Serra_Air_Conditioner_Power label="Power" mappings=[0="OFF", 1="ON"]
+		
+	}
 	Frame label="CLIMA"	{
 		Switch item=AbilitazioneGenClima label="Abilitazione Clima" mappings=[0="OFF", 1="ON"] icon="switch"
 		Selection item=ImpostaStagioneCorrente label="Setpoint Stagione" mappings=[0="INVERNO", 1="ESTATE"] icon="vacation"
